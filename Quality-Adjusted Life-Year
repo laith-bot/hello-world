@@ -1,0 +1,20 @@
+import sys
+
+# get user input for number of constants
+
+input_of_N = int(input())
+input_of_q = int (input())
+input_of_y = int (input())
+
+# verify if user has entered within limits
+
+if input_of_N < 1 or input_of_N > 100: sys.exit()
+if input_of_q < 0 or input_of_q > 1: sys.exit()
+if input_of_y < 0 or input_of_y > 100: sys.exit()
+
+# set up Qaly
+
+Qaly = (input_of_q*input_of_y)
+
+# Output
+print("{0:.3f}".format(Qaly))
