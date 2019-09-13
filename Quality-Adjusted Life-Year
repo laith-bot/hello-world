@@ -1,20 +1,25 @@
-import sys
+def multiplyElements(argument):
+    x = 1
+    for i in argument:
+        x*=i
+    return x
 
-# get user input for number of constants
 
-input_of_N = int(input())
-input_of_q = int (input())
-input_of_y = int (input())
+n = int(input())
 
-# verify if user has entered within limits
+q = []
 
-if input_of_N < 1 or input_of_N > 100: sys.exit()
-if input_of_q < 0 or input_of_q > 1: sys.exit()
-if input_of_y < 0 or input_of_y > 100: sys.exit()
+for i in range(n):
+    i = []
+    i = input().split()
+    i = [float(x) for x in i]
+    i = multiplyElements(i)
+    q.append(i)
 
-# set up Qaly
 
-Qaly = (input_of_q*input_of_y)
+q = round(sum(q),3)
 
-# Output
-print("{0:.3f}".format(Qaly))
+
+
+
+print(q)
